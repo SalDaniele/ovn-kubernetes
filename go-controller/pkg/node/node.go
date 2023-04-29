@@ -417,7 +417,7 @@ func (n *OvnNode) Start(ctx context.Context) error {
 	}
 	nodeAddr := net.ParseIP(nodeAddrStr)
 	if nodeAddr == nil {
-		return fmt.Errorf("failed to parse kubernetes node IP address. %v", err)
+		return fmt.Errorf("failed to parse kubernetes node IP address. %v", nodeAddrStr)
 	}
 
 	if config.OvnKubeNode.Mode != types.NodeModeDPUHost {
